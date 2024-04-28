@@ -34,8 +34,8 @@ app.get("/api/ping", (_req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-httpServer.listen(4000, () => {
-  console.log(`Server started on port 4000`);
+httpServer.listen(5000, () => {
+  console.log(`Server started on port 5000`);
 });
 
 global.onlineUsers = new Map();
