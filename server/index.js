@@ -28,7 +28,12 @@ pool.connect()
   });
 
 app.get("/api/ping", (_req, res) => {
-  return res.json({ msg: "Ping Successful" });
+  const onlineUsersCount = global.onlineUsers.size;
+  
+  // Return the response with the count of online users
+  return res.json({ msg: `Ping Successful. Online users: ${onlineUsersCount}`});
+
+  // return res.json({ msg: "Ping Successful" });
 });
 
 app.use("/api/auth", authRoutes);
