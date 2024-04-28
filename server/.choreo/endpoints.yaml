@@ -4,6 +4,6 @@ endpoints:
   - name: k-chat
     port: 5000
     type: REST
-    networkVisibility: Organisation
+    networkVisibility: Organization
     context: /api  
     schemaFilePath: openapi.yaml
